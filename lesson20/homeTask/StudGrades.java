@@ -18,7 +18,7 @@ public class StudGrades {
         }
         System.out.println("All grades: " + grades);
 
-        //1st reverse method. very nice method :)
+        //1st reverse method. very nice method
         Collections.reverse(grades);
         System.out.println(grades);
         Collections.reverse(grades);
