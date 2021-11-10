@@ -29,23 +29,17 @@ public class Garage {
 
 //         Saab cars left
         System.out.println("How many Saab cars left?");
-        int carLeft;
-        if (scanner.hasNextInt()) {
-            carLeft = scanner.nextInt();
-        } else {
-            while (!scanner.hasNextInt()) {
-                scanner.next();
-                System.out.println("Please, input correct number:");
+        while (true) {
+            int carLeft = scanner.nextInt();;
+            Integer newSaabCount = saabCount - carLeft;
+            map.replace(saab, saabCount, newSaabCount);
+            map.put(saab, newSaabCount);
+            if (newSaabCount < 0) {
+                System.out.println("Wrong input! Input correct number:");
+            } else {
+                System.out.println("There are " + map.get(saab) + " Saab cars left in the garage.");
+                break;
             }
-            carLeft = scanner.nextInt();
-        }
-        Integer newSaabCount = saabCount - carLeft;
-        map.replace(saab, saabCount, newSaabCount);
-        map.put(saab, newSaabCount);
-        if (newSaabCount < 0) {
-            System.out.println("Wrong input!");
-        } else {
-            System.out.println("There are " + map.get(saab) + " Saab cars left in the garage.");
         }
     }
 }
