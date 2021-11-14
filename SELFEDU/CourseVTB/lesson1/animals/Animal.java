@@ -1,15 +1,14 @@
 package SELFEDU.CourseVTB.lesson1.animals;
 
-public class Animal {
-    String name;
-    String color;
-    int age;
+public abstract class Animal {
+    protected String name;
+    protected String color;
+    protected int age;
+    // модификатор protected расширяет видимость ДЛЯ НАСЛЕДНИКОВ (для класса "Cow")
 
     public void info() {
         System.out.println(name + " " + color + " " + age);
     }
 
-    public void voice() {
-        System.out.println(name + " voice");
-    }
+    public abstract void voice();
 }

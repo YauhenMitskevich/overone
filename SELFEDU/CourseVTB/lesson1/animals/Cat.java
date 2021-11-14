@@ -1,6 +1,10 @@
 package SELFEDU.CourseVTB.lesson1.animals;
-
-public class Cat extends Animal{
+// от final класса нельзя наследоваться
+public final class Cat extends Animal {
+    @Override
+    public String toString() {
+        return "CAT [" + name + " " + color + " " + age + "]";
+    }
 
     public String getName() {
         return name;
@@ -15,5 +19,16 @@ public class Cat extends Animal{
         this.name = name;
         this.color = color;
         this.age = age;
+
+
+    }
+
+    @Override
+    public void voice() {
+        System.out.println(name + " say meow");
+    }
+
+    public void catMethod() {
+        System.out.println("Jump");
     }
 }
