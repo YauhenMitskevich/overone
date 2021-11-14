@@ -11,7 +11,7 @@ public class Fruit {
 
     class  Bone {
         public void getAmount() {
-            System.out.println(fruit + " has " + countOfBones + " bones");
+            System.out.println(fruit + " has " + countOfBones + " bones.");
         }
     }
 }
