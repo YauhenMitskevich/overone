@@ -1,22 +1,17 @@
 package lesson24;
 
 public class Fruit {
-    String apple;
-    String cherry;
-    int countAppleBones;
-    int countCherryBones;
+    private String fruit;
+    private int countOfBones;
 
-    Fruit() {
-        apple = "Apple";
-        cherry = "Cherry";
-        countAppleBones = 14;
-        countCherryBones = 23;
+    public Fruit(String fruit, int countOfBones) {
+        this.fruit = fruit;
+        this.countOfBones = countOfBones;
     }
 
-    class Bone {
-        public void countOfBone() {
-            System.out.println(apple + "has " + countAppleBones + "bones");
-            System.out.println(cherry + "has " + countCherryBones + "bones");
+    class  Bone {
+        public void getAmount() {
+            System.out.println(fruit + " has " + countOfBones + " bones");
         }
     }
 }
