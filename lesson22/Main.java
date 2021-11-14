@@ -4,6 +4,7 @@ import java.util.HashMap;
 
 public class Main {
     public static void main(String[] args) {
+
         HashMap<Integer, String> countries = new HashMap<>();
         countries.put(1, "Belarus");
         countries.put(2, "Belgium");
